@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src = "js/bunnyCreation.js" ></script>
+    </head>
+    <body>
+    <div id = "pageHeader"></div>
+    <div id = "pageBody">
+        <form id = "frm" name = "form" method = "post" action="/submitBunny">
+            <div id="frmTop" >
+                <label>Points to spend: </label>
+                <label id = "points">100</label>
+            </div>
+            <div id="frmBodyLeft" >
+                <br><br>
+                <label for="name">Bunny Name: </label>
+                <input type="text" name="txtName" id = "name" placeholder="Choose a name">
+                <br><br>
+                <label for="speed">Speed: </label>
+                <input type="number" name="txtSpeed" id = "speed" placeholder="Choose your speed">
+                <label id = "distanceError">You don't have enough points for that!</label>
+                <br><br>
+                <label for="distance">Distance: </label>
+                <input type="number" name="txtDistance" id = "distance" placeholder="Choose your distance">
+                <label id = "speedError">You don't have enough points for that!</label>
+                <br><br>
+                <label for="rest">Rest: </label>
+                <input type="number" name="txtRest" id = "rest" placeholder="Choose your rest level">
+                <label id = "restError">You don't have enough points for that!</label>
+            </div>
+            <div id = "frmBodyRight" >
+                <div id ="bunnyImage" >IMAGE PLACEHOLDER</div>
+            </div>
+            <div id="frmBottom" >
+                <input type="submit" name="btnSubmit" id = "submit_form" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div id = "pageFooter" ></div>
+    </body>
+</html>
