@@ -1,2 +1,35 @@
-body
-    color: #fff
+@import import/var
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+
+#container
+    height: 100vh
+    display: flex
+    flex-direction: column
+header,footer
+    height: 5%
+    background-color: $theme-element-bg
+header
+    nav
+        font-weight: bold
+        padding: 1%
+        ul
+            display: flex
+            flex-direction: row
+            li
+                padding: 0 5px
+                color:#fff
+                list-style-type: none
+                a
+                    cursor: pointer
+                    &:hover
+                        color: $link-hover
+                
+
+main
+    height: 90%
+    background-color: $theme-main-bg
+footer

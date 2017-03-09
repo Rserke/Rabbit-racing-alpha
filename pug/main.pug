@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        title Rabit racing
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="css/style.css" rel="stylesheet")
+        if destination
+            script(src='js/bunny'+destination+'.js')
+    body
+        #container
+            header
+                nav
+                    ul
+                        each val in ['Home','Creation', 'Race', 'Replay', 'Leaderboard']
+                            li
+                                a(src="bunny"+val+".html")=val
+            main
+                if destination == 'Creation'
+                    include import/Creation.pug
+                if destination == 'Leaderboard'
+                    include import/Leaderboard.pug
+                if destination == 'Race'
+                    include import/Race.pug
+                if destination == 'Selection'
+                    include import/Selection.pug
+
+                
+            footer

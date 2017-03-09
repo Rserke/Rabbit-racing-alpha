@@ -1,2 +1,41 @@
-body {
-  color: #fff; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+#container {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+header, footer {
+  height: 5%;
+  background-color: #222; }
+
+header nav {
+  font-weight: bold;
+  padding: 1%; }
+  header nav ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    header nav ul li {
+      padding: 0 5px;
+      color: #fff;
+      list-style-type: none; }
+      header nav ul li a {
+        cursor: pointer; }
+        header nav ul li a:hover {
+          color: #72B5CC; }
+
+main {
+  height: 90%;
+  background-color: #F0F1F0; }
