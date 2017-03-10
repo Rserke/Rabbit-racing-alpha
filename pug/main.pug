@@ -7,6 +7,7 @@ html(lang="en")
         link(href="css/style.css" rel="stylesheet")
         if destination
             script(src='js/bunny'+destination+'.js')
+            script(src="https://code.jquery.com/jquery-3.1.1.min.js")
     body
         #container
             header
@@ -16,6 +17,7 @@ html(lang="en")
                             li
                                 a(src="bunny"+val+".html")=val
             main
+            //
                 if destination == 'Creation'
                     include import/Creation.pug
                 if destination == 'Leaderboard'
