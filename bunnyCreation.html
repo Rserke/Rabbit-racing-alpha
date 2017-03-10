@@ -32,6 +32,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
         <script src = "js/bunnyCreation.js" ></script>
     </head>
     <body>
@@ -47,22 +50,22 @@
             <div id="frmBodyLeft" >
                 <br><br>
                 <label for="name">Bunny Name: </label>
-                <input type="text" name="txtName" id = "name" placeholder="Choose a name">
+                <input type="text" name="bunny_name" id = "name" placeholder="Choose a name">
                 <br><br>
                 <label for="speed">Speed: </label>
-                <input type="number" name="txtSpeed" id = "speed" placeholder="Choose your speed">
+                <input type="number" name="speed" id = "speed" placeholder="Choose your speed">
                 <br><br>
                 <label for="distance">Distance: </label>
-                <input type="number" name="txtDistance" id = "distance" placeholder="Choose your distance">
+                <input type="number" name="distance" id = "distance" placeholder="Choose your distance">
                 <br><br>
                 <label for="rest">Rest: </label>
-                <input type="number" name="txtRest" id = "rest" placeholder="Choose your rest level">
+                <input type="number" name="rest" id = "rest" placeholder="Choose your rest level">
             </div>
             <div id = "frmBodyRight" >
                 <div id ="bunnyImage" >IMAGE PLACEHOLDER</div>
             </div>
             <div id="frmBottom" >
-                <input type="submit" name="btnSubmit" id = "submit_form" value="Submit">
+                <input type="button" id = "submit_form" value="Submit">
             </div>
         </form>
     </div>

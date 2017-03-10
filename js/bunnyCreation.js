@@ -4,6 +4,7 @@ window.onload = init;
 
 function init(){
     addEvents()
+    $("#submit_form").click(createBunny)
 }
 
 function addEvents(){
@@ -43,4 +44,10 @@ function totalPoints(){
         initPoints = 0
     }
     document.getElementById("points").innerHTML = initPoints
+}
+
+function createBunny(){
+    let posturl = $("#frm").attr("action");
+    console.log(`localhost:1234${posturl}`)
+    $.post(posturl, $(':input').serialize());
 }
