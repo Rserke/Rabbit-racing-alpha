@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #pageHeader{
     height:10vh;
 }
@@ -40,11 +40,7 @@
     float:left;
 }
 
-#speedError, #distanceError, #restError {
+#errorLabel {
     color:red;
     visibility: hidden;
 }
-=======
-body {
-  color: #fff; }
->>>>>>> 1ece678d83aeaded6a38896c130003e4e0ae57d3

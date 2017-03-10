@@ -21,21 +21,26 @@ function totalPoints(){
     var speedVal = document.getElementById("speed").value
     var distanceVal = document.getElementById("distance").value
     var restVal = document.getElementById("rest").value
+    var error = document.getElementById("errorLabel")
+    error.style.visibility = "hidden"
 
     if(speedVal != "" && speedVal <= initPoints){
         initPoints -= parseInt(speedVal)
     } else if(speedVal > initPoints){
-        document.getElementById("speedError").style.visibility = "visible"
+        error.style.visibility = "visible"
+        initPoints = 0
     }
     if(distanceVal != "" && distanceVal <= initPoints){
         initPoints -= parseInt(distanceVal)
     } else if(distanceVal > initPoints){
-        document.getElementById("distanceError").style.visibility = "visible"
+        error.style.visibility = "visible"
+        initPoints = 0
     }
     if(restVal != "" && restVal <= initPoints){
         initPoints -= parseInt(restVal)
     } else if(restVal > initPoints){
-        document.getElementById("restError").style.visibility = "visible"
+        error.style.visibility = "visible"
+        initPoints = 0
     }
     document.getElementById("points").innerHTML = initPoints
 }
