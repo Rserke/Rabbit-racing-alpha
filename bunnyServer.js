@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const mongoClient = require("mongodb").MongoClient;
 const bodyParser = require("body-parser");
+const path = require("path");
+const url = require("url");
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-const url = 'mongodb://localhost:27017/test';
+const dburl = 'mongodb://localhost:27017/test';
 
 app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -14,9 +16,17 @@ app.all('/*', function (req, res, next) {
     next();
 });
 
-app.get('/selectbunny/:username', (req, res) => {
+app.get(['css/*.css', '*/js/*.js'], function (req, res) {
+    res.sendFile(path.join(__dirname + url.parse(req.url).pathname));
+});
+
+app.get("/bunnyselection", (req, res) => {
+    res.sendFile(__dirname + "/bunnySelection.html");
+})
+
+app.get('/bunnyselection/:username', (req, res) => {
     let username = req.params.username
-    mongoClient.connect(url, (err, db) => {
+    mongoClient.connect(dburl, (err, db) => {
         findAllUserBunnies(db, (docs) => {
             res.send(docs);
             db.close();
