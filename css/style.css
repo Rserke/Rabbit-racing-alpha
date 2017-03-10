@@ -39,3 +39,50 @@ header nav {
 main {
   height: 90%;
   background-color: #F0F1F0; }
+/*- senne -*/
+#pageHeader{
+    height:10vh;
+}
+
+#pageBody {
+    height:80vh;
+}
+
+#pageFooter{
+    height:10vh;
+}
+
+#frm{
+    width:inherit;
+    height:inherit;
+}
+
+#frmTop{
+    height:10%;
+    width:inherit;
+}
+
+#frmBodyLeft, #frmBodyRight{
+    height:80%;
+    width:50%;
+    float:left;
+}
+
+#frmBodyRight{
+    background:lightblue;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px;
+}
+
+#frmBottom {
+    height:10%;
+    width:100%;
+    float:left;
+}
+
+#errorLabel {
+    color:red;
+    visibility: hidden;
+}
+
